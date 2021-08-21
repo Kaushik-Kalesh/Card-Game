@@ -1,38 +1,43 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+.center {
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 42%;
+}
+button {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: inherit;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button:focus {
+    outline: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button:active {
+    transform: scale(0.98);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.card {
+    width: 10%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
 }
-
-.App-link {
-  color: #61dafb;
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container {
+    padding: 2px 16px;
 }
