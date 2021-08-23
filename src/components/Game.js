@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Card from "./Card";
 
@@ -9,9 +9,13 @@ const Game = ({ _cards, _shuffledCards, _vote, _end, _scores, _winner }) => {
     const [end, setEnd] = _end;
     const [scores, setScores] = _scores;
     const [winner, setWinner] = _winner;
+    const [roundNumber, setRoundNumber] = useState(1);
 
     return (
         <div className="Game">
+            <h1 style={{ transform: "translateX(+15%)" }}>
+                {!vote ? `Round ${roundNumber}` : ""}
+            </h1>
             <div
                 style={{
                     display: "flex",
@@ -26,6 +30,7 @@ const Game = ({ _cards, _shuffledCards, _vote, _end, _scores, _winner }) => {
                     )
                 )}
             </div>
+            <br />
             <button
                 type="button"
                 style={{ transform: "translateX(+332%)" }}
@@ -70,6 +75,7 @@ const Game = ({ _cards, _shuffledCards, _vote, _end, _scores, _winner }) => {
                             )
                     );
                     setShuffledCards(!shuffledCards);
+                    setRoundNumber(roundNumber + 1);
                 }}
             >
                 Next Round

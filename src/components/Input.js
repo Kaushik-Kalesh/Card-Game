@@ -12,6 +12,7 @@ const Input = ({ _cards, _shuffledCards, _plrNames, _show }) => {
                 <>
                     <input
                         type="text"
+                        placeholder="Enter your name"
                         onBlur={(e) => {
                             const newPlrNames = plrNames;
                             newPlrNames[cards.indexOf(c)] = e.target.value;
