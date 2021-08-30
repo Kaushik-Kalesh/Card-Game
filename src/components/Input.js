@@ -8,6 +8,7 @@ const Input = ({ _cards, _shuffledCards, _plrNames, _show }) => {
 
     return (
         <div className="Input">
+            <h1>Card Game</h1>
             {cards.map((c) => (
                 <>
                     <input
